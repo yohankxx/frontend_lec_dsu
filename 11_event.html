@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./11_style.css">
+</head>
+<body>
+  <div id="box">Color</div>
+  <ul id="color">
+    <li>Red</li>
+    <li>Blue</li>
+    <li>Green</li>
+  </ul>
+  <script>
+    const box = document.getElementById('box');
+    const color = document.getElementById('color');
+    box.classList.add('box');
+    box.classList.add('bg-red');
+    box.classList.add('txt-white');
+
+    box.classList.replace('bg-red', 'bg-blue');
+
+    // setInterval(()=>{
+    //   box.classList.toggle('txt-white');
+    //   box.classList.toggle('bg-blue');
+    // }, 1000)
+
+    color.onclick = function (ul_tag) {
+      const target = ul_tag.target;
+      if (target.tagName == "LI"){
+        target.classList.toggle("txt-purple");
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+    
+<!-- box.className = 'box bg-red txt-white'
+
+
+
+    box.classList.remove('bg-red');
+    box.classList.add('bg-blue');
+
+
+box.style.width = '100px';
+box.style.height = '100px';
+box.style['margin-left'] = '10px';
+box.style.border = '5px solid black';
+box.style.backgroundColor = 'red';
+box.style.color = 'white';
+
+box.style.display = 'flex';
+box.style.justifyContent = 'center';
+box.style.alignItems = 'center'; -->
